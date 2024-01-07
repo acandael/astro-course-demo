@@ -11,7 +11,22 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
+    "@astrojs/rss": "^4.0.1",
+    "@astrojs/svelte": "^5.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/cabin": "^5.0.16",
+    "@types/markdown-it": "^13.0.7",
+    "@types/sanitize-html": "^2.9.5",
     "astro": "^4.0.9",
+    "date-fns": "^3.0.6",
+    "kwesforms": "^2.2.6",
+    "markdown-it": "^14.0.0",
+    "sanitize-html": "^2.11.0",
+    "svelte": "^4.2.8",
+    "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10"
   }
 }
