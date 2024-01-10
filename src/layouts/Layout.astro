@@ -1,14 +1,15 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { getThumbnail } from '../cloudinary';
 import '@fontsource/cabin';
 interface Props {
 	title: string;
-	description: string;
+	description?: string;
 	image?: string;
 }
 
-const { title = 'Rhythm Natioin', description = 'A community of music producers and enthusiasts', image = '/images/drums.png' } = Astro.props;
+const { title = 'Rhythm Natioin', description = 'A community of music producers and enthusiasts', image = getThumbnail("A community of music producers and enthusiasts") } = Astro.props;
 ---
 
 <!doctype html>
@@ -45,3 +46,4 @@ const { title = 'Rhythm Natioin', description = 'A community of music producers 
 		<Footer />
 	</body>
 </html>
+../cloudinary

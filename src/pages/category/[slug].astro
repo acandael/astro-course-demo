@@ -6,32 +6,18 @@ import Main from "../../components/Main.astro";
 import H1 from "../../components/H1.astro";
 import Pagination from "../../components/Pagination.astro";
 import PostList from "../../components/PostList.astro";
-export const getStaticPaths = async () => {
-  const posts = await getCollection("posts");
-  const allCategories = posts.flatMap(post => post.data.categories);
-const categories = Array.from(new Set(allCategories));
 
-const paths = categories.map(category => {
-  const postsByCategory = posts.filter(post => post.data.categories.includes(category));
-  return {
-    params: {
-      slug: category
-    },
-    props: {
-      category,
-      posts: postsByCategory
-    }
-  }
-})
-return paths;
-};
+const page = Number(Astro.url.searchParams.get("page")) || 1;
 
-type Props = {
-  category: string;
-  posts: CollectionEntry<"posts">[]
-}
+const postsPerPage = Number(import.meta.env.POSTS_PER_PAGE);
+const start = postsPerPage * (page - 1);
+const end = start + postsPerPage;
 
-const {category, posts} = Astro.props;
+const category = Astro.params.slug as string;
+const allPosts = await getCollection("posts");
+const postsByCategory = allPosts.filter(post => post.data.categories.includes(category));
+
+const posts = postsByCategory.slice(start, end);
 ---
 
 <Layout title="Blog - Rhythm Nation" description="Read an learn from music producers and enthusiasts">
@@ -44,12 +30,17 @@ const {category, posts} = Astro.props;
   
     <CategoryList categories={[category]} title="Posts tagged" />
   
+  
+  {posts.length === 0 ? <p>No posts were found with that tag</p> : 
   <div class="mb-12">
-    <Pagination nextURL="/blog/2" />
+    <Pagination page={page} numberOfPosts={postsByCategory.length} />
   </div>
   <PostList posts={posts} />
   <div class="mb-36">
-    <Pagination nextURL="/blog/2" />
+    <Pagination page={page} numberOfPosts={postsByCategory.length} />
   </div>
+  }
+  
+  
 </Main>
 </Layout>

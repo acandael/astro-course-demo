@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Anthony-Candaele-s-workspace-u6euko.eu-west-1.xata.sh/db/astro-course-demo",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

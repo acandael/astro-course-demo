@@ -1,0 +1,17 @@
+{
+  "id": "mig_cmf6kb1i1vbr81a169bg",
+  "parentID": "mig_cmf6k21i1vbr81a169ag",
+  "checksum": "1:3e0b1d570d33d0fa90b0f714bfa8b2322b59533d73ebea44d63553429eb27721",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "email",
+          "type": "email",
+          "unique": true
+        },
+        "table": "subscribers"
+      }
+    }
+  ]
+}

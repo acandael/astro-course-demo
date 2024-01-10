@@ -1,0 +1,18 @@
+{
+  "id": "mig_cmel5d45cn4ohu8tbbkg",
+  "parentID": "mig_cmel4qs5cn4ohu8tbbjg",
+  "checksum": "1:e67a43d0ce0a9a25d464ed7fc1f9a3bfad2bf471bead2198f5d79d2ae2cf17b8",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "emoji",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "star"
+        },
+        "table": "reactions"
+      }
+    }
+  ]
+}

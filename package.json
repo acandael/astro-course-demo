@@ -11,22 +11,29 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
+    "@astrojs/netlify": "^4.1.0",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/svelte": "^5.0.3",
     "@astrojs/tailwind": "^5.1.0",
+    "@cloudinary/url-gen": "^1.14.0",
     "@fontsource/cabin": "^5.0.16",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@types/markdown-it": "^13.0.7",
     "@types/sanitize-html": "^2.9.5",
+    "@xata.io/client": "^0.28.3",
     "astro": "^4.0.9",
+    "bcryptjs": "^2.4.3",
     "date-fns": "^3.0.6",
     "kwesforms": "^2.2.6",
     "markdown-it": "^14.0.0",
     "sanitize-html": "^2.11.0",
     "svelte": "^4.2.8",
+    "svelte-fa": "^4.0.1",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/bcryptjs": "^2.4.6"
   }
 }

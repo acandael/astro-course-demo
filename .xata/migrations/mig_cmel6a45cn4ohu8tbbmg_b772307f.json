@@ -1,0 +1,19 @@
+{
+  "id": "mig_cmel6a45cn4ohu8tbbmg",
+  "parentID": "mig_cmel5ts5cn4ohu8tbblg",
+  "checksum": "1:b772307fb299219a25aadd30ce62ff9b588ff1912ae7cfdf00e852cda48ed25a",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "user",
+          "type": "link",
+          "link": {
+            "table": "users"
+          }
+        },
+        "table": "reactions"
+      }
+    }
+  ]
+}

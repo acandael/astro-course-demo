@@ -1,0 +1,18 @@
+{
+  "id": "mig_cmel5ts5cn4ohu8tbblg",
+  "parentID": "mig_cmel5d45cn4ohu8tbbkg",
+  "checksum": "1:1bc7ed7666a26a444eb38acea6efc067d83557793227194854176c067bbe9e36",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "post",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": ""
+        },
+        "table": "reactions"
+      }
+    }
+  ]
+}
